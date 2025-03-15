@@ -3,4 +3,4 @@ from .models import CrudDB
 
 # Register your models here.
 
-admin.site.register(CrudDB)
+#admin.site.register(CrudDB)

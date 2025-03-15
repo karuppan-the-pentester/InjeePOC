@@ -23,5 +23,5 @@ urlpatterns = [
     path('',views.index,name="Read"),
     path('index.html',views.index,name="Read"),
     path('create',views.create,name="Create"),
-    path('update/<int:un_id>',views.update,name="Update"),
+    path('update/<str:un_id>',views.update,name="Update"),
 ]

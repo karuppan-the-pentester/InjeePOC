@@ -49,10 +49,10 @@
                         </thead>
                         <tbody>
                         {% for i in data %}
-                          <tr class="clickable-row" data-href='update/{{ i.id }}'>
-                            <th scope="row">{{ i.id }}</th>
-                            <td>{{ i.UserName }}</td>
-                          </tr>
+                            <tr class="clickable-row" data-href='update/{{ i.id }}'>
+                              <th scope="row">{{ forloop.counter }}</th>
+                              <td>{{ i.username}}</td>
+                            </tr>
                         {% endfor %}
                         </tbody>
                       </table>
