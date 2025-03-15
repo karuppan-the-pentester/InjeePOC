@@ -19,7 +19,7 @@ docker pull mindaslab/injee:0.11.0
 
 
 ``` bash
-docker run -d -p 4125:4125  -v $(pwd)/injee/files:/app/files  -v $(pwd)/injee/views:/app/views  -v $(pwd)/injee/backups:/app/backups  mindaslab/injee:0.11.0
+docker run -d -p 4125:4125   mindaslab/injee:0.11.0
 ```
 
 
