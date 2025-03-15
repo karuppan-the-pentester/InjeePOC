@@ -5,14 +5,18 @@ import requests
 # Create your views here.
 
 def index(request):
+    if len(requests.get("http://localhost:4125/api/crud").json()) < 1: 
+        requests.post("http://localhost:4125/api/crud", json={ 'username' : 'Karthik Raja'}, headers={"Content-Type": "application/json"})
+
     if("Create" in request.POST):
         return redirect("Create")
+    
     return render(request,'index.html',{'data': requests.get("http://localhost:4125/api/crud").json() })
 
 def create(request):
     if request.method=='POST':
         username=request.POST.get('username')
-        requests.post("http://localhost:4125/api/crud", { 'username' : username})
+        requests.post("http://localhost:4125/api/crud", json={ 'username' : username}, headers={"Content-Type": "application/json"})
         return redirect('Read')
     else:
         print("Request Failed")
